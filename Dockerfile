@@ -1,7 +1,9 @@
 FROM python:3.9.6-alpine
 
+
 # set work directory
 WORKDIR /usr/src/app
+
 
 # set environment variables
 ENV PYTHONDONTWRITEBYTECODE 1
@@ -18,6 +20,7 @@ RUN pip install -r requirements.txt
 
 # copy project
 COPY . .
+
 
 RUN chmod +x /usr/src/app/docker-entrypoint.sh
 
